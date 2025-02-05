@@ -10,26 +10,26 @@ Invoke-WebRequest https://github.com/scottaxcell/winddcutil/releases/download/v2
 $Shell = New-Object -ComObject WScript.Shell
 $Desktop = $Shell.SpecialFolders("Desktop")
 
-$LinkLeft = $Shell.CreateShortcut("$Desktop\Toggle Displays.lnk")
-$LinkLeft.Arguments = "-Command $Directory\ToggleMonitorInput.ps1 $DisplayLeft,$DisplayRight"
-$LinkLeft.Hotkey = "Ctrl+Shift+0"
-$LinkLeft.TargetPath = "pwsh.exe"
-$LinkLeft.WindowStyle = 7
-$LinkLeft.WorkingDirectory = "$Directory"
-$LinkLeft.Save()
+$Link = $Shell.CreateShortcut("$Desktop\Toggle Displays.lnk")
+$Link.Arguments = "-Command $Directory\ToggleMonitorInput.ps1 $DisplayLeft,$DisplayRight"
+$Link.Hotkey = "Ctrl+Shift+0"
+$Link.TargetPath = "pwsh.exe"
+$Link.WindowStyle = 7
+$Link.WorkingDirectory = "$Directory"
+$Link.Save()
 
-$LinkLeft = $Shell.CreateShortcut("$Desktop\Toggle Left Display.lnk")
-$LinkLeft.Arguments = "-Command $Directory\ToggleMonitorInput.ps1 $DisplayLeft"
-$LinkLeft.Hotkey = "Ctrl+Shift+1"
-$LinkLeft.TargetPath = "pwsh.exe"
-$LinkLeft.WindowStyle = 7
-$LinkLeft.WorkingDirectory = "$Directory"
-$LinkLeft.Save()
+$Link = $Shell.CreateShortcut("$Desktop\Toggle Left Display.lnk")
+$Link.Arguments = "-Command $Directory\ToggleMonitorInput.ps1 $DisplayLeft"
+$Link.Hotkey = "Ctrl+Shift+1"
+$Link.TargetPath = "pwsh.exe"
+$Link.WindowStyle = 7
+$Link.WorkingDirectory = "$Directory"
+$Link.Save()
 
-$LinkRight = $Shell.CreateShortcut("$Desktop\Toggle Right Display.lnk")
-$LinkRight.Arguments = "-Command $Directory\ToggleMonitorInput.ps1 $DisplayRight"
-$LinkRight.Hotkey = "Ctrl+Shift+2"
-$LinkRight.TargetPath = "pwsh.exe"
-$LinkRight.WindowStyle = 7
-$LinkRight.WorkingDirectory = "$Directory"
-$LinkRight.Save()
+$Link = $Shell.CreateShortcut("$Desktop\Toggle Right Display.lnk")
+$Link.Arguments = "-Command $Directory\ToggleMonitorInput.ps1 $DisplayRight"
+$Link.Hotkey = "Ctrl+Shift+2"
+$Link.TargetPath = "pwsh.exe"
+$Link.WindowStyle = 7
+$Link.WorkingDirectory = "$Directory"
+$Link.Save()
