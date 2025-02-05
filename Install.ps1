@@ -1,4 +1,4 @@
-$DisplayLeft = 3
+$DisplayLeft = 1
 $DisplayRight = 2
 
 $PSNativeCommandUseErrorActionPreference = $true

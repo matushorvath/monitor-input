@@ -8,8 +8,8 @@ $ErrorActionPreference = "Stop"
 
 # Map result of 'getvcp' to a parameter for 'setvcp'
 $MapVCP = @{
-	"4369" = "0x12"
-	"4370" = "0x11"
+	"4625" = "0x12"
+	"4626" = "0x11"
 }
 
 $Displays | ForEach-Object {
