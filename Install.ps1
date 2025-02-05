@@ -1,13 +1,11 @@
-$Target = "C:\Documents\xwinddcutil"
 $DisplayLeft = 3
 $DisplayRight = 2
 
 $PSNativeCommandUseErrorActionPreference = $true
 $ErrorActionPreference = "Stop"
 
-$Directory = New-Item -Path $Target -ItemType Directory -Force
+$Directory = Get-Location
 Invoke-WebRequest https://github.com/scottaxcell/winddcutil/releases/download/v2.0.0/winddcutil.exe -OutFile "$Directory\winddcutil.exe"
-Copy-Item "ToggleMonitorInput.ps1" -Destination $Directory
 
 $Shell = New-Object -ComObject WScript.Shell
 $Desktop = $Shell.SpecialFolders("Desktop")
